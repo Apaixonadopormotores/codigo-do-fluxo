@@ -1,13 +1,26 @@
 using System.Runtime.CompilerServices;
 
-public class materiaprima
+public class materiaPrima
 {
-    string nome;
+    String nome;
     Int64 id;
-}
 
-public void SetNome()
-{
-this.nome = SetNome;
+    public void SetNome(String n)
+    {
+        nome = n;
+    }
 
+    public void setid(Int64 id)
+   {
+    id=id;
+
+
+   }
+
+   public string GetNome(){
+    return nome;
+   } 
+   public Int64 Getid(){
+    return id;
+   } 
 }
