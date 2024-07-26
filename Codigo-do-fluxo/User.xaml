@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YourNamespace.MainPage"
+             BackgroundColor="#FFF2CC">
+    <ScrollView>
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.ColumnSpan="2" 
+                   Text="Tela de cadastro" 
+                   FontSize="24" 
+                   HorizontalOptions="Center"
+                   TextColor="Black" />
+
+            <StackLayout Grid.Row="1" Grid.Column="0" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nome Completo" Grid.Column="0"/>
+                    <Entry x:Name="NomeCompletoEntry" Grid.Column="0" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+
+                    <Label Text="E-mail" Grid.Column="0"/>
+                    <Entry x:Name="EmailEntry" Grid.Column="0" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+
+                    <Label Text="Senha" Grid.Column="0"/>
+                    <Entry x:Name="SenhaEntry" Grid.Column="0" IsPassword="True" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+
+                    <Label Text="Data de Nascimento" Grid.Column="0"/>
+                    <Entry x:Name="DataNascimentoEntry" Grid.Column="0" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+
+                    <Label Text="CPF" Grid.Column="0"/>
+                    <Entry x:Name="CPFEntry" Grid.Column="0" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="1" Padding="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Gênero" Grid.Column="0"/>
+                    <Entry x:Name="GeneroEntry" Grid.Column="0" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+
+                    <Label Text="Telefone" Grid.Column="0"/>
+                    <Entry x:Name="TelefoneEntry" Grid.Column="0" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+
+                    <Label Text="Sms" Grid.Column="0"/>
+                    <Entry x:Name="SmsEntry" Grid.Column="0" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+
+                    <Label Text="Endereço" Grid.Column="0"/>
+                    <Entry x:Name="EnderecoEntry" Grid.Column="0" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+
+                    <Label Text="Numero do MEI" Grid.Column="0"/>
+                    <Entry x:Name="MEIEntry" Grid.Column="0" BackgroundColor="White" TextColor="Black" />
+                    <Button Text="🗑️" Grid.Column="1" Clicked="OnDeleteButtonClicked" />
+                </Grid>
+            </StackLayout>
+
+            <Button Grid.Row="2" Grid.ColumnSpan="2" 
+                    Text="SALVAR"
+                    BackgroundColor="#FFE699"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    Clicked="OnSaveButtonClicked" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
